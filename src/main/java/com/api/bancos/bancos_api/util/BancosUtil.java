@@ -14,7 +14,8 @@ public class BancosUtil {
 	        Map.entry("itaucard", "Itaú"),
 	        Map.entry("bancointer", "Banco Inter"),
 	        Map.entry("inter", "Banco Inter"),
-	        Map.entry("bancobb", "Banco do Brasil")
+	        Map.entry("bancobb", "Banco do Brasil"),
+	        Map.entry("bb", "Banco do Brasil")
 	    );
 	
 	private static Gson gson = new Gson();

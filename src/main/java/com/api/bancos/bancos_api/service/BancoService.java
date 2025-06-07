@@ -76,8 +76,13 @@ public class BancoService {
 		bancosBrJsonArray.removeIf(banco -> banco.getFullName() == null);
 
 		String nomeBanco = bancosBrJsonArray.stream()
+			.filter(banco -> banco.getFullName() 
+					//  TODO: VERIFICAR TAMBÉM FULLNAME.TOLOWERCASE.TRIM.CONTAINS(emissor) 
+					.toLowerCase()
+					.contains(emissor))
 			.filter(banco -> banco.getFullName()
 					.toLowerCase()
+					.trim()
 					.contains(emissor))
 			.findFirst()
 			.map(BancosBrDTO::getFullName)
